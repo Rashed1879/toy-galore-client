@@ -105,7 +105,7 @@ const Register = () => {
 							<p className="text-error">{error}</p>
 						</div>
 						<div className="form-control mt-6">
-							<button className="btn btn-secondary hover:btn-primary">
+							<button className="btn btn-[#262A53] hover:btn-[#628395] rounded-full">
 								Sign Up
 							</button>
 						</div>
