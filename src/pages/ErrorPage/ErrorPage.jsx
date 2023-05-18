@@ -8,7 +8,7 @@ const ErrorPage = () => {
 		<section className="flex items-center h-screen p-16 bg-[#FFE3E3]">
 			<div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
 				<div className="max-w-lg text-center mb-5">
-					<img src="../../../public/images/error-404.jpg" alt="" />
+					<img src="/images/error-404.jpg" alt="" />
 				</div>
 				<Link
 					to="/"

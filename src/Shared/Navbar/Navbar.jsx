@@ -19,7 +19,7 @@ const Navbar = () => {
 			<div className="flex justify-between items-center md:p-4 p-3">
 				<div className="flex items-center space-x-10">
 					<img
-						src="../../../public/images/ToyGalore.png"
+						src="/images/ToyGalore.png"
 						className="w-48 h-12"
 						alt=""
 					/>
@@ -89,9 +89,9 @@ const Navbar = () => {
 										? 'pb-1 border-b-2 border-[#262A53] hover:border-[#FFA0A0]'
 										: ''
 								}
-								to="/blog"
+								to="/blogs"
 							>
-								Blog
+								Blogs
 							</NavLink>
 						</li>
 						<li>
