@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
+import { toast } from 'react-toastify';
 
 const AddToy = () => {
 	const { user } = useContext(AuthContext);
@@ -37,7 +38,9 @@ const AddToy = () => {
 		})
 			.then((res) => res.json())
 			.then((data) => {
-				console.log(data);
+				if (data.insertedId) {
+					toast('The Toy is Added!');
+				}
 			});
 	};
 
