@@ -49,7 +49,7 @@ const Navbar = () => {
 										? 'pb-1 border-b-2 border-[#262A53] hover:border-[#FFA0A0]'
 										: ''
 								}
-								to="/alltoys"
+								to="/alltoy"
 							>
 								All Toys
 							</NavLink>
