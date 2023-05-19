@@ -1,4 +1,11 @@
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Gallery = () => {
+	useEffect(() => {
+		AOS.init();
+	}, []);
 	const images = [
 		'https://images.pexels.com/photos/3991204/pexels-photo-3991204.jpeg?auto=compress&cs=tinysrgb&w=600',
 		'https://images.pexels.com/photos/6642328/pexels-photo-6642328.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -16,7 +23,12 @@ const Gallery = () => {
 				<h2 className="text-3xl font-bold mb-6 text-center">
 					Car Toy Showcase: Explore Our Collection
 				</h2>
-				<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+				<div
+					data-aos="zoom-in"
+					data-aos-delay="200"
+					data-aos-easing="ease-in-out"
+					className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+				>
 					{images.map((image, index) => (
 						<div key={index} className="relative">
 							<img
