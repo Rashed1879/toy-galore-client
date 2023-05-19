@@ -11,11 +11,7 @@ const ToyDetails = () => {
 						{toy.name}
 					</h2>
 					<p className="text-xl text-center font-semibold">
-						Lorem ipsum dolor sit amet consectetur, adipisicing
-						elit. Similique possimus sapiente deleniti illum illo
-						molestiae voluptatum iste asperiores distinctio nulla,
-						consectetur ad iusto sed, quisquam nemo. Neque eveniet
-						debitis veniam.
+						{toy.description}
 					</p>
 					<hr className="border-2 border-[#FFE3E3] my-3" />
 					<div className="flex w-full">
