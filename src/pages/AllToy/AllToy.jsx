@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const AllToy = () => {
 	const [allToys, setAllToys] = useState([]);
+	const [searchName, setSearchName] = useState('');
 
 	useEffect(() => {
 		fetch('http://localhost:5000/alltoys')
@@ -11,16 +12,26 @@ const AllToy = () => {
 			.then((data) => setAllToys(data));
 	}, []);
 
+	const handleSearch = () => {
+		fetch(`http://localhost:5000/toySearchByName/${searchName}`)
+			.then((res) => res.json())
+			.then((data) => setAllToys(data));
+	};
+
 	return (
 		<>
 			<div className="form-control mt-5">
 				<div className="input-group w-min mx-auto">
 					<input
+						onChange={(e) => setSearchName(e.target.value)}
 						type="text"
-						placeholder="Search a toy..."
+						placeholder="Name keyword e.g: car"
 						className="input input-bordered border-[#FFA0A0]"
 					/>
-					<button className="btn btn-square bg-[#FFA0A0] border-[#FFA0A0]">
+					<button
+						onClick={handleSearch}
+						className="btn btn-square bg-[#FFA0A0] border-[#FFA0A0]"
+					>
 						<BiSearch className="w-6 h-6" />
 					</button>
 				</div>
