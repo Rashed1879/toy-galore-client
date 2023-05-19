@@ -1,4 +1,5 @@
 import Banner from './Banner';
+import ExtraSection from './ExtraSection';
 import Gallery from './Gallery';
 
 const Home = () => {
@@ -8,6 +9,8 @@ const Home = () => {
 			<Banner></Banner>
 			{/* Gallery Section */}
 			<Gallery></Gallery>
+			{/* Extra Sections */}
+			<ExtraSection></ExtraSection>
 		</div>
 	);
 };

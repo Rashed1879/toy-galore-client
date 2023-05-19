@@ -26,7 +26,7 @@ const Navbar = () => {
 					<ul
 						className={`md:flex md:space-x-5 text-[#262A53] font-semibold absolute duration-500 md:static ${
 							open
-								? 'top-2 right-12 text-center bg-[#FFE3E3] shadow-md p-2 rounded-md'
+								? 'top-2 right-12 text-center bg-[#FFE3E3] shadow-md p-2 rounded-md z-10'
 								: '-top-96 right-12 text-center bg-[#FFE3E3] rounded-md'
 						}`}
 					>
@@ -128,7 +128,7 @@ const Navbar = () => {
 								</div>
 							) : (
 								<Link to="/login">
-									<button className="btn btn-[#262A53]">
+									<button className="btn btn-sm btn-outline hover:bg-[#FFA0A0]">
 										Login
 									</button>
 								</Link>
@@ -140,9 +140,9 @@ const Navbar = () => {
 				<div onClick={() => setOpen(!open)} className="md:hidden ">
 					<span>
 						{open === true ? (
-							<HiX className="h-6 w-6" />
+							<HiX className="h-6 w-6 text-[#262A53]" />
 						) : (
-							<HiMenu className="h-6 w-6" />
+							<HiMenu className="h-6 w-6 text-[#262A53]" />
 						)}
 					</span>
 				</div>
@@ -169,7 +169,7 @@ const Navbar = () => {
 						</div>
 					) : (
 						<Link to="/login">
-							<button className="btn btn-[#262A53] hover:btn-[#FFA0A0]">
+							<button className="btn btn-sm btn-outline hover:bg-[#FFA0A0]">
 								Login
 							</button>
 						</Link>

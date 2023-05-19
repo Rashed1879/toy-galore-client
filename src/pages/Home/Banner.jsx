@@ -13,9 +13,11 @@ const Banner = () => {
 								Race into A World of Car Toy Thrills!!
 							</h2>
 							<p className="text-center">
-								There are many variations of passages of
-								available, but the majority <br /> have suffered
-								alteration in some form
+								Rev up your excitement and dive into a world of
+								Car Toy Thrills! Experience the thrill of
+								high-speed races and unlock your inner champion.
+								Get ready to accelerate into an adventure like
+								no other!
 							</p>
 							<div className="space-x-5">
 								<button className="btn bg-[#262A53] text-[#FFE3E3]">
@@ -45,9 +47,11 @@ const Banner = () => {
 								Race into A World of Car Toy Thrills!!
 							</h2>
 							<p className="text-center">
-								There are many variations of passages of
-								available, but the majority <br /> have suffered
-								alteration in some form
+								Rev up your excitement and dive into a world of
+								Car Toy Thrills! Experience the thrill of
+								high-speed races and unlock your inner champion.
+								Get ready to accelerate into an adventure like
+								no other!
 							</p>
 							<div className="space-x-5">
 								<button className="btn bg-[#262A53] text-[#FFE3E3]">
@@ -76,9 +80,11 @@ const Banner = () => {
 								Race into A World of Car Toy Thrills!!
 							</h2>
 							<p className="text-center">
-								There are many variations of passages of
-								available, but the majority <br /> have suffered
-								alteration in some form
+								Rev up your excitement and dive into a world of
+								Car Toy Thrills! Experience the thrill of
+								high-speed races and unlock your inner champion.
+								Get ready to accelerate into an adventure like
+								no other!
 							</p>
 							<div className="space-x-5">
 								<button className="btn bg-[#262A53] text-[#FFE3E3]">
@@ -107,9 +113,11 @@ const Banner = () => {
 								Race into A World of Car Toy Thrills!!
 							</h2>
 							<p className="text-center">
-								There are many variations of passages of
-								available, but the majority <br /> have suffered
-								alteration in some form
+								Rev up your excitement and dive into a world of
+								Car Toy Thrills! Experience the thrill of
+								high-speed races and unlock your inner champion.
+								Get ready to accelerate into an adventure like
+								no other!
 							</p>
 							<div className="space-x-5">
 								<button className="btn bg-[#262A53] text-[#FFE3E3]">

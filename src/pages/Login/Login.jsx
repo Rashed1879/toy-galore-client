@@ -105,7 +105,7 @@ const Login = () => {
 
 						<p className="text-error">{error}</p>
 						<div className="form-control mt-6">
-							<button className="btn btn-[#262A53] hover:btn-[#628395] rounded-full">
+							<button className="btn bg-[#FFA0A0] hover:bg-[#628395] rounded-full">
 								Sign In
 							</button>
 						</div>
