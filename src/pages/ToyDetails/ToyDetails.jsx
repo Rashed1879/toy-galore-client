@@ -18,7 +18,7 @@ const ToyDetails = () => {
 						<div className="w-1/2">
 							<h4 className="text-2xl">Product Info</h4>
 							<p className="text-md font-semibold text-[#FFA0A0]">
-								Price : ${toy.price}
+								Price : {toy.price}
 							</p>
 							<p className="text-md font-semibold text-[#FFA0A0]">
 								Rating : {toy.rating}
