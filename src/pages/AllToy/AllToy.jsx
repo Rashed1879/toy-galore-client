@@ -11,13 +11,15 @@ const AllToy = () => {
 	const [searchName, setSearchName] = useState('');
 
 	useEffect(() => {
-		fetch('http://localhost:5000/alltoys')
+		fetch('https://assignment-11-server-ruby-three.vercel.app/alltoys')
 			.then((res) => res.json())
 			.then((data) => setAllToys(data));
 	}, []);
 
 	const handleSearch = () => {
-		fetch(`http://localhost:5000/toySearchByName/${searchName}`)
+		fetch(
+			`https://assignment-11-server-ruby-three.vercel.app/toySearchByName/${searchName}`
+		)
 			.then((res) => res.json())
 			.then((data) => setAllToys(data));
 	};

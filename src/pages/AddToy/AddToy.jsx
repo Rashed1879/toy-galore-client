@@ -30,7 +30,7 @@ const AddToy = () => {
 			quantity,
 			description,
 		};
-		fetch('http://localhost:5000/toys', {
+		fetch('https://assignment-11-server-ruby-three.vercel.app/toys', {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json',

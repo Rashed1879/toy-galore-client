@@ -11,7 +11,7 @@ const MyToys = () => {
 
 	useEffect(() => {
 		fetch(
-			`http://localhost:5000/mytoys/${user.email}?sortOrder=${sortOrder}`
+			`https://assignment-11-server-ruby-three.vercel.app/mytoys/${user.email}?sortOrder=${sortOrder}`
 		)
 			.then((res) => res.json())
 			.then((data) => setMyToys(data));
@@ -35,9 +35,12 @@ const MyToys = () => {
 			confirmButtonText: 'Yes, delete it!',
 		}).then((result) => {
 			if (result.isConfirmed) {
-				fetch(`http://localhost:5000/deleteToy/${id}`, {
-					method: 'DELETE',
-				})
+				fetch(
+					`https://assignment-11-server-ruby-three.vercel.app/deleteToy/${id}`,
+					{
+						method: 'DELETE',
+					}
+				)
 					.then((res) => res.json())
 					.then((data) => {
 						console.log(data);

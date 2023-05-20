@@ -11,7 +11,9 @@ const SubCategory = () => {
 	const [toys, setToys] = useState([]);
 
 	useEffect(() => {
-		fetch(`http://localhost:5000/alltoys/${subCategory}`)
+		fetch(
+			`https://assignment-11-server-ruby-three.vercel.app/alltoys/${subCategory}`
+		)
 			.then((res) => res.json())
 			.then((data) => {
 				setToys(data);

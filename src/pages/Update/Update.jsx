@@ -14,13 +14,16 @@ const Update = () => {
 		const description = form.description.value;
 		const updateData = { price, quantity, description };
 
-		fetch(`http://localhost:5000/updateToy/${toy._id}`, {
-			method: 'PUT',
-			headers: {
-				'content-type': 'application/json',
-			},
-			body: JSON.stringify(updateData),
-		})
+		fetch(
+			`https://assignment-11-server-ruby-three.vercel.app/updateToy/${toy._id}`,
+			{
+				method: 'PUT',
+				headers: {
+					'content-type': 'application/json',
+				},
+				body: JSON.stringify(updateData),
+			}
+		)
 			.then((res) => res.json())
 			.then((data) => {
 				if (data.modifiedCount > 0) {

@@ -54,7 +54,9 @@ const router = createBrowserRouter([
 					</PrivateRoute>
 				),
 				loader: ({ params }) =>
-					fetch(`http://localhost:5000/toydetails/${params.id}`),
+					fetch(
+						`https://assignment-11-server-ruby-three.vercel.app/toydetails/${params.id}`
+					),
 			},
 			{
 				path: 'blogs',

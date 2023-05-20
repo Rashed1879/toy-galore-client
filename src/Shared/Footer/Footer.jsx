@@ -7,7 +7,7 @@ const Footer = () => {
 			<div>
 				<div className="bg-[#FFE3E3] rounded-full">
 					<img
-						src="../../../public/images/ToyGalore.png"
+						src="/images/ToyGalore.png"
 						alt=""
 						className="w-48 h-12"
 					/>
