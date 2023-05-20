@@ -6,12 +6,22 @@ import { Link } from 'react-router-dom';
 const MyToys = () => {
 	const { user } = useContext(AuthContext);
 	const [myToys, setMyToys] = useState([]);
+	const [sortOrder, setSortOrder] = useState(1);
 
 	useEffect(() => {
-		fetch(`http://localhost:5000/mytoys/${user.email}`)
+		fetch(
+			`http://localhost:5000/mytoys/${user.email}?sortOrder=${sortOrder}`
+		)
 			.then((res) => res.json())
 			.then((data) => setMyToys(data));
-	}, [user]);
+	}, [user, sortOrder]);
+
+	const handleSorting = (event) => {
+		event.preventDefault();
+		const form = event.target;
+		const orderValue = form.orderValue.value;
+		setSortOrder(orderValue);
+	};
 
 	const handleDelete = (id) => {
 		Swal.fire({
@@ -52,15 +62,22 @@ const MyToys = () => {
 				My Toys
 			</h2>
 			<div className="w-min mx-auto mb-5">
-				<div className="form-control">
+				<form className="form-control" onSubmit={handleSorting}>
 					<div className="input-group">
-						<button className="btn">sort by price</button>
-						<select className="select select-bordered">
+						<input
+							type="submit"
+							className="btn"
+							value="Sort By Price"
+						/>
+						<select
+							className="select select-bordered"
+							name="orderValue"
+						>
 							<option value={1}>Ascending</option>
 							<option value={-1}>Descending</option>
 						</select>
 					</div>
-				</div>
+				</form>
 			</div>
 			<div>
 				<table className="min-w-full divide-y divide-gray-200 border-2 border-gray-200">

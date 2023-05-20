@@ -10,12 +10,6 @@ const SubCategory = () => {
 	const [subCategory, setSubCategory] = useState('');
 	const [toys, setToys] = useState([]);
 
-	const handleToast = () => {
-		if (!user) {
-			return toast('You have to log in first to view details');
-		}
-	};
-
 	useEffect(() => {
 		fetch(`http://localhost:5000/alltoys/${subCategory}`)
 			.then((res) => res.json())
@@ -23,6 +17,12 @@ const SubCategory = () => {
 				setToys(data);
 			});
 	}, [subCategory]);
+
+	const handleToast = () => {
+		if (!user) {
+			toast('You have to log in first to view details');
+		}
+	};
 
 	return (
 		<div className="my-10">
