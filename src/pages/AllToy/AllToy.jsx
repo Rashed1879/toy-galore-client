@@ -3,6 +3,7 @@ import { BiSearch } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../providers/AuthProvider';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 
 const AllToy = () => {
 	const { user } = useContext(AuthContext);
@@ -28,6 +29,7 @@ const AllToy = () => {
 
 	return (
 		<>
+			<PageTitle title="All Toy"></PageTitle>;
 			<div className="form-control mt-5">
 				<div className="input-group w-min mx-auto">
 					<input

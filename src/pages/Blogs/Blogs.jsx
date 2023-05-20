@@ -1,3 +1,5 @@
+import PageTitle from '../../Shared/PageTitle/PageTitle';
+
 const Blogs = () => {
 	const questionsAndAnswers = [
 		{
@@ -21,25 +23,28 @@ const Blogs = () => {
 	];
 
 	return (
-		<div className="py-12 bg-[#FFE3E3]">
-			<h1 className="text-4xl text-[#262A53] text-center font-bold mb-3">
-				Questions and Answers
-			</h1>
-			<hr className="w-3/4 md:w-1/2 mx-auto border-2 border-[#262A53] mb-8" />
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-8">
-				{questionsAndAnswers.map((qa, index) => (
-					<div
-						key={index}
-						className="mb-8 border-2 border-[#628395] p-5 rounded-lg"
-					>
-						<h2 className="text-2xl text-[#262A53] font-bold mb-2 ">
-							{qa.question}
-						</h2>
-						<p>{qa.answer}</p>
-					</div>
-				))}
+		<>
+			<PageTitle title="Blogs"></PageTitle>
+			<div className="py-12 bg-[#FFE3E3]">
+				<h1 className="text-4xl text-[#262A53] text-center font-bold mb-3">
+					Questions and Answers
+				</h1>
+				<hr className="w-3/4 md:w-1/2 mx-auto border-2 border-[#262A53] mb-8" />
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-8">
+					{questionsAndAnswers.map((qa, index) => (
+						<div
+							key={index}
+							className="mb-8 border-2 border-[#628395] p-5 rounded-lg"
+						>
+							<h2 className="text-2xl text-[#262A53] font-bold mb-2 ">
+								{qa.question}
+							</h2>
+							<p>{qa.answer}</p>
+						</div>
+					))}
+				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 
