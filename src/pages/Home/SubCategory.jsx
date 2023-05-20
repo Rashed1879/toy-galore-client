@@ -27,7 +27,7 @@ const SubCategory = () => {
 	return (
 		<div className="my-10">
 			<h2 className="text-3xl text-center text-[#262A53] font-bold">
-				Watch Out The Available Toys!!
+				Smile-Worthy Kids Toys: Choose Category to Shop
 			</h2>
 			<Tabs className="text-center my-5">
 				<TabList>

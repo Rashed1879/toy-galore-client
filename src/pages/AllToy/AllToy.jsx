@@ -1,8 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { BiSearch } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const AllToy = () => {
+	const { user } = useContext(AuthContext);
 	const [allToys, setAllToys] = useState([]);
 	const [searchName, setSearchName] = useState('');
 
@@ -16,6 +19,11 @@ const AllToy = () => {
 		fetch(`http://localhost:5000/toySearchByName/${searchName}`)
 			.then((res) => res.json())
 			.then((data) => setAllToys(data));
+	};
+	const handleToast = () => {
+		if (!user) {
+			toast('You have to log in first to view details');
+		}
 	};
 
 	return (
@@ -80,7 +88,10 @@ const AllToy = () => {
 									{toy.quantity}
 								</td>
 								<td className="px-6 py-4 text-center">
-									<button className="bg-[#262A53] hover:bg-[#628395] text-white font-bold py-2 px-4 rounded-lg">
+									<button
+										onClick={handleToast}
+										className="bg-[#262A53] hover:bg-[#628395] text-white font-bold py-2 px-4 rounded-lg"
+									>
 										<Link to={`/toydetails/${toy._id}`}>
 											View Details
 										</Link>
